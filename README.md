@@ -71,23 +71,19 @@ Root Directory
    
 ## 🚀 How It Works
 
-1. Detection Phase
+- **1. Detection Phase**
+  The user uploads an image through the Streamlit interface.
+  The system passes the image through the best.pt YOLOv8 model to detect and localize the license plate.
 
-* The user uploads an image through the Streamlit interface.
-* The system passes the image through the best.pt YOLOv8 model to detect and localize the license plate.
+- **2. Image Processing**
+  The detected license plate region is cropped and enhanced to improve OCR accuracy.
 
-2. Image Processing
+- **3. OCR Phase**
+  The cropped image is encoded and sent to the Groq API.
+  Using the vision capabilities of Llama 3, the license plate text is extracted in milliseconds.
 
-* The detected license plate region is cropped and enhanced to improve OCR accuracy.
-
-3. OCR Phase
-
-* The cropped image is encoded and sent to the Groq API.
-* Using the vision capabilities of Llama 3, the license plate text is extracted in milliseconds.
-
-4. Output
-
-* The recognized plate number is displayed on the Streamlit dashboard along with the original image and bounding box.
+- **4. Output**
+  The recognized plate number is displayed on the Streamlit dashboard along with the original image and bounding box.
 
 ---
 
@@ -99,23 +95,20 @@ Contributions are welcome! Follow these steps:
    ```bash
    git checkout -b feature/NewAlgorithm
    ```
-
 2. **Commit your changes**
    ```bash
    git commit -m "Added some feature"
    ```
-
 3. **Push to the branch**
    ```bash
    git push origin feature/NewAlgorithm
    ```
-
 4. **Open a Pull Request**
 
 ---
 
 # 👨‍💻 Author
-Sathvik Palivela AI / ML & Computer Vision Enthusiast
+Sathvik Palivela - AI / ML & Computer Vision Enthusiast
 
 # 📄 License
 
